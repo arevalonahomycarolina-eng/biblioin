@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Moderna - Actividades</title>
+  <link rel="stylesheet" href="css/actividades.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#1E90FF" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 6px;">
+        <path d="M3 4v16h18V4H3zm16 14H5V6h14v12zM7 8h10v2H7V8zm0 4h10v2H7v-2z"/>
+      </svg>
+      Biblioteca INFRAMEN
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Catalogo.html">Catalogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
+        <li><a href="actividades.html">Activiades</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Noticias de la Biblioteca</h1>
+    <p>Mantente informado sobre eventos, actividades y novedades culturales.</p>
+  </div>
+</section>
+
+
+<section class="filter-section">
+  <button class="filter-btn active" data-category="all">Todas</button>
+  <button class="filter-btn" data-category="evento">Eventos</button>
+  <button class="filter-btn" data-category="digital">Digital</button>
+  <button class="filter-btn" data-category="taller">Talleres</button>
+  <button class="filter-btn" data-category="ecologico">Ecológico</button>
+</section>
+
+<section class="noticias-grid">
+  <article class="noticia" data-category="digital">
+    <img src="imagenes/N.espacio.jpg" alt="Noticia">
+    <h3>Nuevo espacio digital</h3>
+    <p>Hemos inaugurado un área de tablets y computadoras para recursos digitales.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/clud.L.webp" alt="Noticia">
+    <h3>Club de lectura juvenil</h3>
+    <p>Un club para jóvenes lectores inicia este mes con actividades dinámicas.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/historia.webp" alt="Noticia">
+    <h3>Exposición histórica</h3>
+    <p>Exposición sobre manuscritos y documentos antiguos de gran valor cultural.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="taller">
+    <img src="imagenes/taller.webp" alt="Noticia">
+    <h3>Taller de escritura creativa</h3>
+    <p>Participa en nuestro taller para mejorar habilidades de escritura.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/donacion.webp" alt="Noticia">
+    <h3>Campaña de donación de libros</h3>
+    <p>Recolecta libros para fomentar la lectura en comunidades necesitadas.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/poesia.webp" alt="Noticia">
+    <h3>Concurso de poesía 2025</h3>
+    <p>Participa en nuestro concurso anual de poesía con premios para todas las edades.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/L.para niños.webp" alt="Noticia">
+    <h3>Programa de lectura para niños</h3>
+    <p>Actividades diarias para incentivar la lectura en los más pequeños de la comunidad.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="ecologico">
+    <img src="imagenes/B.verde.webp" alt="Noticia">
+    <h3>Biblioteca verde</h3>
+    <p>Programa ecológico para adoptar prácticas sostenibles en la biblioteca.</p>
+    <a href="#">Leer más</a>
+  </article>
+
+  <article class="noticia" data-category="evento">
+    <img src="imagenes/autores.webp" alt="Noticia">
+    <h3>Charlas de autores invitados</h3>
+    <p>Charlas con autores nacionales e internacionales sobre literatura y cultura.</p>
+    <a href="#">Leer más</a>
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2025 Biblioteca Moderna. Todos los derechos reservados.</p>
+  <p>
+    <a href="#">Facebook</a> | 
+    <a href="#">Twitter</a> | 
+    <a href="#">Instagram</a>
+  </p>
+</footer>
+
+<script src="js/noticias.js"></script>
+</body>
+</html>
