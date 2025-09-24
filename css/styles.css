@@ -51,6 +51,11 @@ nav ul {
   gap: 20px;
 }
 
+nav li {
+  text-align: center;
+  margin: 0 15px;
+}
+
 nav ul li a {
   padding: 10px;
   transition: color 0.3s;
@@ -58,6 +63,18 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #1E90FF;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
 

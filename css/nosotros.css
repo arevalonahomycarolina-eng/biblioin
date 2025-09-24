@@ -7,8 +7,12 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.p {
+  color: #e0f7f9;
 }
 
 a {
@@ -48,6 +52,11 @@ nav ul {
   gap: 20px;
 }
 
+nav li {
+  text-align: center;
+  margin: 0 15px;
+}
+
 nav ul li a {
   padding: 10px;
   transition: color 0.3s;
@@ -57,6 +66,17 @@ nav ul li a:hover {
   color: #1E90FF;
 }
 
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
 
 .hero {
   height: 60vh;
@@ -67,7 +87,6 @@ nav ul li a:hover {
   color: #fff;
   position: relative;
   margin-top: 70px;
-  background-image: url('../imagenes/libreria\ 4.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,7 +103,6 @@ nav ul li a:hover {
   top:0; left:0;
   width:100%;
   height:100%;
-  background-color: rgba(0,0,0,0.5);
 }
 
 .hero-content {
@@ -145,7 +163,7 @@ h2 {
 
 .card-content p {
   font-size: 0.95rem;
-  color: #555;
+  color: #070707;
 }
 
 
@@ -154,6 +172,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   justify-content: center;
+  color: #1E90FF;
 }
 
 @keyframes fadeIn {
@@ -242,47 +261,73 @@ h2 {
   margin-bottom: 40px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
-    font-family: Poppins;
-    margin: 0;
-    background-color: #010101;
-    color: #eee;
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2b2929;
+  background-color: #fff;
 }
 
-.search svg{
-    width: 25px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
 .logo {
-    height: 80px;
-    width: auto;
-    border-radius: 8px;    
-}
-header{
-    width: 1200px;
-    max-width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1E90FF;
 }
 
-header .logo{
-    font-weight: bolder;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-header .menu{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 500;
+nav li {
+  text-align: center;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1E90FF;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
 .slider{

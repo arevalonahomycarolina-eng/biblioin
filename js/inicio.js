@@ -11,22 +11,16 @@
     });
   }
 
-  window.addEventListener('scroll', checkCards);
-  window.addEventListener('load', checkCards);
+window.addEventListener('scroll', checkCards);
+window.addEventListener('load', checkCards);
 
-  let indice = 0;
-  const slides = document.querySelectorAll('.image-slide');
+const carousel = document.querySelector('.video-carousel');
+let index = 0;
 
-  function mostrarSlide(n) {
-    slides.forEach(s => s.classList.remove('active'));
-    indice = (n + slides.length) % slides.length;
-    slides[indice].classList.add('active');
-  }
-
-  function mover(dir) {
-    mostrarSlide(indice + dir);
-  }
-
-  setInterval(() => {
-    mover(1);
-  }, 5000);
+setInterval(() => {
+  index = (index + 1) % carousel.children.length;
+  carousel.scrollTo({
+    left: carousel.children[index].offsetLeft,
+    behavior: 'smooth'
+  });
+}, 1000); // cambia cada 5 segundos
