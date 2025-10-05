@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000000;
+  background: linear-gradient(to right, #0f13e7a8, #8804d4ad, #b316b8bb);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo_img{
+  height: 24px;
+  width: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  text-align: center;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1E90FF;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.protocolo-img {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.protocolo-img img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.prologo-tarjeta {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 6px solid #1E90FF;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.prologo-tarjeta .titulo {
+  font-size: 1.8rem;
+  color: #1E90FF;
+  margin-bottom: 10px;
+}
+
+.prologo-tarjeta .subtitulo {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.prologo-tarjeta .contenido {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+footer {
+  background-color: #d5ffc2;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000000;
+  flex: 1;
+}
+
+footer .text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer .text2 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+footer .text2 a {
+  color: #1E90FF;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer .text2 a:hover {
+  text-decoration: underline;
+}
+
+footer .logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+footer .logos img {
+  width: 4%;
+  height: 4%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+footer .logos img:hover {
+  transform: scale(1.1);
+}
