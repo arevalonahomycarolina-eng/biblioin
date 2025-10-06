@@ -24,3 +24,10 @@ setInterval(() => {
     behavior: 'smooth'
   });
 }, 1000); // cambia cada 5 segundos
+
+const menuBurguer = document.getElementById("menu-burguer");
+const navMenu = document.querySelector("nav ul");
+
+menuBurguer.addEventListener("click", () => {
+  navMenu.classList.burguer("show");
+});

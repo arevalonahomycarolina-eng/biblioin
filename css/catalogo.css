@@ -21,12 +21,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
-header .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -34,40 +34,43 @@ header .container {
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  flex-wrap: wrap;
 }
 
-.logo_img {
-  width: 24px;
+.logo_img{
   height: 24px;
+  width: 24px;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 nav li {
   text-align: center;
+  margin: 0 15px;
 }
 
-.nav-icon {
-  width: 24px;
-  height: 24px;
-}
-
-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
+nav ul li a {
+  padding: 10px;
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav ul li a:hover {
   color: #1E90FF;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
 .hero {
@@ -236,3 +239,32 @@ footer .logos img:hover {
   .galeria { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
   .filtros button { padding: 0.4rem 0.8rem; margin: 0.2rem; }
 }
+
+.menu-burguer {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-burguer {
+    display: block;
+  }
+}
+

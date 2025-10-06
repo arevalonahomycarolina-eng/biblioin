@@ -26,6 +26,7 @@ header {
   left: 0;
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
@@ -37,7 +38,6 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  flex-wrap: wrap;
 }
 
 .logo_img{
@@ -49,13 +49,11 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 0;
 }
 
 nav li {
   text-align: center;
+  margin: 0 15px;
 }
 
 nav ul li a {
@@ -70,8 +68,13 @@ nav ul li a:hover {
 .nav-icon {
   height: 24px;
   width: 24px;
-  display: block;
-  margin: 0 auto 5px;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
 .hero {
@@ -275,5 +278,33 @@ footer .logos img:hover {
 
   h2.tema {
     font-size: 1.4rem;
+  }
+}
+
+.menu-burguer {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-burguer {
+    display: block;
   }
 }

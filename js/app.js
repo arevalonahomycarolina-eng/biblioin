@@ -39,13 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  const carousel = document.querySelector('.video-carousel');
-  let index = 0;
+const carousel = document.querySelector('.video-carousel');
+let index = 0;
 
-  setInterval(() => {
-    index = (index + 1) % carousel.children.length;
-    carousel.scrollTo({
-      left: carousel.children[index].offsetLeft,
-      behavior: 'smooth'
-    });
-  }, 3000);
+setInterval(() => {
+  index = (index + 1) % carousel.children.length;
+  carousel.scrollTo({
+    left: carousel.children[index].offsetLeft,
+    behavior: 'smooth'
+  });
+}, 3000);
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});

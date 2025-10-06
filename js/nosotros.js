@@ -60,3 +60,10 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+});
