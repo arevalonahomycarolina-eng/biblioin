@@ -50,9 +50,9 @@ setInterval(() => {
   });
 }, 3000);
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuBurguer = document.getElementById("menu-burguer");
 const navMenu = document.querySelector("nav ul");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
+menuBurguer.addEventListener("click", () => {
+  navMenu.classList.burguer("show");
 });

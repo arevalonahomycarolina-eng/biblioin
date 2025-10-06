@@ -61,9 +61,9 @@ thumbnails.forEach((thumbnail, index) => {
     })
 })
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuBurguer = document.getElementById("menu-burguer");
 const navMenu = document.querySelector("nav ul");
 
-menuToggle.addEventListener("click", () => {
+menuBurguer.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });

@@ -34,9 +34,9 @@ filterBtns.forEach(btn => {
   });
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.querySelector("nav ul");
+const menuBurguer = document.getElementById("menu-burguer");
+const navMenu = document.querySelector("nav ul");
 
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
+menuBurguer.addEventListener("click", () => {
+  navMenu.classList.burguer("show");
+});
