@@ -38,6 +38,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  position: relative;
 }
 
 .logo_img{
@@ -303,6 +304,11 @@ footer a:hover {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;        
+  transform: translateY(-50%);
+  z-index: 1001;
 }
 
 @media (max-width: 992px) {
@@ -333,7 +339,7 @@ footer a:hover {
     display: flex;
   }
 
-  .menu-toggle {
+  .menu-burguer {
     display: block;
   }
 
