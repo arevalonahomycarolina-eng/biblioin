@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #000000;
+  color: #000;
   background: linear-gradient(to right, #0f13e7a8, #8804d4ad, #b316b8bb);
   line-height: 1.6;
 }
@@ -35,9 +34,10 @@ header .container {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  flex-wrap: wrap;
 }
 
-.logo_img{
+.logo_img {
   height: 24px;
   width: 24px;
 }
@@ -46,11 +46,12 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav li {
   text-align: center;
-  margin: 0 15px;
 }
 
 nav ul li a {
@@ -74,7 +75,6 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-
 .hero {
   height: 50vh;
   display: flex;
@@ -88,11 +88,6 @@ nav ul li a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .hero::after {
@@ -108,6 +103,7 @@ nav ul li a:hover {
   position: relative;
   z-index: 1;
   animation: fadeIn 1.5s ease forwards;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
@@ -118,7 +114,6 @@ nav ul li a:hover {
 .hero-content p {
   font-size: 1.2rem;
 }
-
 
 .actividades-destacada {
   display: flex;
@@ -162,7 +157,7 @@ nav ul li a:hover {
 
 .actividades-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 50px auto;
@@ -178,10 +173,9 @@ nav ul li a:hover {
   transform: translateY(30px);
   transition: transform 0.3s, opacity 0.3s;
   padding-bottom: 20px;
-}
-
-.actividades-grid .actividades:hover img {
-  transform: scale(1.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .actividades-grid .actividades h3 {
@@ -195,16 +189,16 @@ nav ul li a:hover {
   font-size: 0.95rem;
   padding: 15px 20px;
   line-height: 1.6;
+  background: #fff;
+  border-radius: 6px;
 }
-
 
 footer {
   background-color: #d5ffc2;
   padding: 30px 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-  color: #000000;
-  flex: 1;
+  color: #000;
 }
 
 footer .text {
@@ -236,36 +230,14 @@ footer .logos {
 }
 
 footer .logos img {
-  width: 4%;
-  height: 4%;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 footer .logos img:hover {
   transform: scale(1.1);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@media(max-width:768px){
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .actividades-destacada {
-    flex-direction: column;
-  }
-  .actividades-destacada img, .actividades-destacada .texto {
-    flex: 1 1 100%;
-  }
 }
 
 .filter-section {
@@ -288,3 +260,42 @@ footer .logos img:hover {
   background: #1E90FF;
   color: #fff;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media(max-width:1024px){
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
+}
+
+@media(max-width:768px){
+  header .container {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero {
+    height: 40vh;
+  }
+  .hero-content h1 { font-size: 1.8rem; }
+  .actividades-destacada { flex-direction: column; }
+  .actividades-destacada .texto { flex: 1 1 100%; }
+  .actividades-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+@media(max-width:480px){
+  .hero { height: 35vh; }
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-content p { font-size: 0.9rem; }
+  .filter-btn { padding: 8px 15px; font-size: 0.9rem; }
+  .actividades-grid { grid-template-columns: 1fr; }
+  footer .logos img { width: 30px; height: 30px; }
+}
+

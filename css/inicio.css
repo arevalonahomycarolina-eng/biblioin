@@ -37,6 +37,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  flex-wrap: wrap;
 }
 
 .logo_img{
@@ -48,11 +49,13 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 nav li {
   text-align: center;
-  margin: 0 15px;
 }
 
 nav ul li a {
@@ -67,145 +70,101 @@ nav ul li a:hover {
 .nav-icon {
   height: 24px;
   width: 24px;
-}
-
-.nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
+  display: block;
+  margin: 0 auto 5px;
 }
 
 .hero {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
   margin-top: 70px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top:0; left:0;
-  width:100%;
-  height:100%;
-}
-
-.hero-content {
-  position: relative;
-  max-width: 800px;
-  z-index: 1;
-  animation: fadeIn 1.5s ease forwards;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  color: #fff;
 }
 
 section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .tema- {
-  display: flex;
-  align-items: center;
-  gap: 3%;
   text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 40px;
 }
 
-h2 .tema-{
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 40px;
-  color: #1E90FF;
-  height: 15px;
+h2.tema {
   font-size: 2rem;
+  color: #1E90FF;
+  margin-bottom: 20px;
 }
 
 .container_ {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+  justify-content: center;
 }
 
 .tarjeta {
-      background: #fff;
-      border-radius: 15px;
-      overflow: hidden;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .tarjeta img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .tarjeta h3 {
-      margin: 10px 0 5px;
-      color: #222;
-    }
-
-    .tarjeta p {
-      font-size: 0.9rem;
-      padding: 0 10px 15px;
-      color: #555;
-    }
-
-    .tarjeta:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
-    }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-@media(max-width:768px){
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .newsletter form {
-    flex-direction: column;
-  }
+.tarjeta h3 {
+  margin: 10px 0 5px;
+  color: #222;
 }
 
-.books {
+.tarjeta p {
+  font-size: 0.95rem;
+  padding: 0 10px 15px;
+  color: #555;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.video-carousel {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 90vw;      
+  height: 90vh;     
+  margin: 5vh auto;        
+  border-radius: 0;  
+  align-items: center;     
+}
+
+.video-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+.video-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 footer {
@@ -214,7 +173,6 @@ footer {
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   color: #000000;
-  flex: 1;
 }
 
 footer .text {
@@ -223,7 +181,7 @@ footer .text {
 }
 
 footer .text2 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 20px;
 }
 
@@ -246,8 +204,8 @@ footer .logos {
 }
 
 footer .logos img {
-  width: 4%;
-  height: 4%;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -256,40 +214,66 @@ footer .logos img:hover {
   transform: scale(1.1);
 }
 
-.video-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tarjeta img {
+    height: 160px;
+  }
 }
 
-.video-carousel {
-  width: 80%;
-  margin: 0 auto;
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tarjeta img {
+    height: 150px;
+  }
+
+  h2.tema {
+    font-size: 1.6rem;
+  }
 }
 
-.video-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  position: relative;
-}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 
-.video-slide video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .logo_img {
+    height: 20px;
+    width: 20px;
+  }
 
-.video-carousel {
-  overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
+  nav ul li a {
+    font-size: 0.9rem;
+  }
 
-.video-carousel::-webkit-scrollbar {
-  display: none;
-}
+  .tarjeta img {
+    height: 130px;
+  }
 
-.espaciador{
-  height: 130px;
+  h2.tema {
+    font-size: 1.4rem;
+  }
 }
